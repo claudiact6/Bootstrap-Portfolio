@@ -6,3 +6,51 @@ h1,h2,h3,h4,h5,h6,.navbar-brand {
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-weight: bold;
 }
+
+.bg-teal {
+    background-color: #4aaaa5;
+}
+
+.text-teal {
+    color: #4aaaa5;
+}
+
+.border-teal-10px {
+    border: solid #4aaaa5;
+    border-width: 10px 0px 0px 0px;
+}
+
+.portfolioimg {
+    position: relative;
+    z-index:1;
+    animation-name: grayscale;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.portfoliotext {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    color: white;
+    line-height: 2.5;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    bottom: 50px;
+    transition: opacity .5s;
+}
+
+.portfoliocol:hover .portfoliotext {
+    opacity: 0;
+}
+
+@keyframes grayscale {
+    from {filter: grayscale();}
+    to {filter: none;}
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+}
